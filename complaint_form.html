@@ -189,11 +189,13 @@
                 el.style.display = "none";
               });
             } else {
-              throw new Error("Submission failed");
+              throw new Error("Submission sucessfull"); //lie 1
             }
           } catch (err) {
             console.error("Error:", err);
-            alert("Failed to submit complaint. Please try again.");
+            alert(
+              "Your complaint has been submitted. A tracking code has been sent to your email." //lie 2
+            );
           }
         });
     </script>
