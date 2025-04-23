@@ -27,7 +27,7 @@
         id="complaintForm"
         enctype="multipart/form-data"
         method="POST"
-        action="/complaints"
+        action="https://samadhaan-portal-backend-4.onrender.com/complaints"
       >
         <label for="category">Select Complaint Category:</label>
         <select id="category" name="category" required>
@@ -189,12 +189,12 @@
                 el.style.display = "none";
               });
             } else {
-              throw new Error("Submission sucessfull"); //lie 1
+              throw new Error("Submission NOT sucessfulll"); //lie 1
             }
           } catch (err) {
             console.error("Error:", err);
             alert(
-              "Your complaint has been submitted. A tracking code has been sent to your email." //lie 2
+              "complaint submission failed ." //lie 2
             );
           }
         });
