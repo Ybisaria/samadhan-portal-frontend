@@ -138,8 +138,11 @@ renderTable();
 
 async function loadComplaints() {
   try {
-    const res = await fetch("http://localhost:3000/api/complaints");
+    const res = await fetch(
+      "https://samadhaan-portal-backend-4.onrender.com/api/complaints"
+    );
     const complaints = await res.json();
+    console.log(complaints);
 
     const tableBody = document.querySelector("#complaintsTable tbody");
     tableBody.innerHTML = ""; // Clear existing rows
